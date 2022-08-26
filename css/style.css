@@ -1,0 +1,24 @@
+:root {
+    --clr-accent-red: #FB3B64;
+    --clr-accent-blue: #08A6E4;
+    --clr-accent-green: #55DFB4;
+
+    --clr-primary-black: #000000;
+    --clr-primary-white: #FFFFFF;
+
+    --clr-neutral-gray-1: #A5A5A5;
+    --clr-neutral-gray-2: #707070;
+
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+/*font-family: 'Raleway', sans-serif;*/
+
+.container {
+    width: 1352px;
+}
+
+
+
+
