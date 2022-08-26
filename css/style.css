@@ -2,10 +2,8 @@
     --clr-accent-red: #FB3B64;
     --clr-accent-blue: #08A6E4;
     --clr-accent-green: #55DFB4;
-
     --clr-primary-black: #000000;
     --clr-primary-white: #FFFFFF;
-
     --clr-neutral-gray-1: #A5A5A5;
     --clr-neutral-gray-2: #707070;
 
@@ -13,8 +11,10 @@
     --button-radius: 35px;
 
     --ff-secondary: 'Raleway', sans-serif;
-
     font-family: 'Open Sans', sans-serif;
+}
+
+* {
     box-sizing: border-box;
 }
 
@@ -60,7 +60,6 @@
     border-color: var(--clr-accent-blue);
 }
 
-
 .hero {
     display: flex;
     flex-direction: column;
@@ -77,14 +76,10 @@
     font-size: 3.0625rem;
 }
 
-.hero__heading {
+.hero__description {
     margin-top: 20px;
     margin-bottom: 38px;
-}
-
-.hero__image {
-    width: 100%;
-    height: auto;
+    line-height: 1.375rem;
 }
 
 .button {
@@ -105,6 +100,90 @@
 
 .button--big {
     padding: 22px 155px;
+}
+
+.hero__image {
+    width: 100%;
+    height: auto;
+}
+
+
+
+.statistics {
+    margin-top: 50px;
+}
+
+.statistics__title {
+    font-family: var(--ff-secondary);
+    text-align: center;
+    font-size: 2.25rem;
+}
+
+.statistics__container {
+    max-width: 800px;
+    margin: 100px auto 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.statistics__single {
+    max-width: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    font-family: var(--ff-secondary);
+}
+
+.statistics__circle {
+    border-radius: 50%;
+    width: 63px;
+    height: 63px;
+    position: relative;
+}
+
+.statistics__img {
+    position: absolute;
+}
+
+.statistics__single:nth-child(1) .statistics__circle {
+    background-color: var(--clr-accent-red);
+}
+
+.statistics__single:nth-child(1) .statistics__img {
+    top: 0;
+    left: 45%;
+}
+
+.statistics__single:nth-child(2) .statistics__circle {
+    background-color: var(--clr-accent-blue);
+}
+
+.statistics__single:nth-child(2) .statistics__img {
+    top: 14px;
+    left: 47%;
+}
+
+.statistics__single:nth-child(3) .statistics__circle {
+    background-color: var(--clr-accent-green);
+}
+
+.statistics__single:nth-child(3) .statistics__img {
+    top: 6px;
+    left: 50%;
+}
+
+.statistics__number {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: 0.1875rem;
+    margin-top: 13px;
+}
+
+.statistics__description {
+    color: var(--clr-neutral-gray-1);
+    margin-top: 19px;
 }
 
 
