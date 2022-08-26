@@ -9,16 +9,50 @@
     --clr-neutral-gray-1: #A5A5A5;
     --clr-neutral-gray-2: #707070;
 
+    --ff-secondary: 'Raleway', sans-serif;
+
     font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
 }
 
-/*font-family: 'Raleway', sans-serif;*/
-
 .container {
     width: 1352px;
+    margin: 0 auto;
 }
 
+.page-header {
+    box-shadow: 0 3px 6px #00000029;
+}
 
+.page-header > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.page-header__logo {
+    font-family: var(--ff-secondary);
+    color: var(--clr-accent-blue);
+    font-size: 2rem;
+    line-height: 2.3125rem;
+    text-decoration: none;
+}
 
+.page-header__navigation {
+    display: flex;
+    gap: 3.75rem;
+}
+
+.page-header__navigation-item {
+    text-decoration: none;
+    color: var(--clr-neutral-gray-1);
+    text-transform: uppercase;
+    padding: 28px 15px;
+    display: inline-block;
+    border-bottom: 4px solid transparent;
+}
+
+.page-header__navigation-item:hover {
+    color: var(--clr-primary-black);
+    border-color: var(--clr-accent-blue);
+}
