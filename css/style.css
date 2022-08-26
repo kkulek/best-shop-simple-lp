@@ -9,6 +9,9 @@
     --clr-neutral-gray-1: #A5A5A5;
     --clr-neutral-gray-2: #707070;
 
+    --primary-shadow: rgba(7, 172, 230, 0.16);
+    --button-radius: 35px;
+
     --ff-secondary: 'Raleway', sans-serif;
 
     font-family: 'Open Sans', sans-serif;
@@ -56,3 +59,52 @@
     color: var(--clr-primary-black);
     border-color: var(--clr-accent-blue);
 }
+
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero__content {
+    margin-top: 125px;
+    text-align: center;
+}
+
+.hero__header {
+    font-family: var(--ff-secondary);
+    font-size: 3.0625rem;
+}
+
+.hero__heading {
+    margin-top: 20px;
+    margin-bottom: 38px;
+}
+
+.hero__image {
+    width: 100%;
+    height: auto;
+}
+
+.button {
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    padding: 16px 65px;
+    border-radius: var(--button-radius);
+    border: none;
+    text-decoration: none;
+}
+
+.button--primary {
+    background-color: var(--clr-accent-blue);
+    border-radius: var(--button-radius);
+    box-shadow: 3px 10px 14px var(--primary-shadow);
+}
+
+.button--big {
+    padding: 22px 155px;
+}
+
+
