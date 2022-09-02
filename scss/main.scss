@@ -1,0 +1,17 @@
+@import '/generic/reset';
+
+@import '/general/base';
+@import '/general/colors';
+@import '/general/typography';
+@import '/general/buttons';
+
+@import '/settings/mixins';
+@import 'settings/breakpoints';
+
+@import 'blocks/header';
+@import 'blocks/hero';
+@import 'blocks/statistics';
+@import 'blocks/benefits';
+@import 'blocks/pricing';
+@import 'blocks/contact';
+@import 'blocks/footer';
