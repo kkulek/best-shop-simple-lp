@@ -1,11 +1,11 @@
-@import '/generic/reset';
+@import 'generic/reset';
 
-@import '/general/base';
-@import '/general/colors';
-@import '/general/typography';
-@import '/general/buttons';
+@import 'general/base';
+@import 'general/colors';
+@import 'general/typography';
+@import 'general/buttons';
 
-@import '/settings/mixins';
+@import 'settings/mixins';
 @import 'settings/breakpoints';
 
 @import 'blocks/header';
