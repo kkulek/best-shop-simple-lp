@@ -1,9 +1,18 @@
-$clr-primary: #08A6E4;
-$clr-accent-attention: #FB3B64;
-$clr-accent-nature: #55DFB4;
+$colors: (
+        primary: #08A6E4,
+        accent-attention: #FB3B64,
+        accent-nature: #55DFB4,
+        neutral-gray-light: #A5A5A5,
+        neutral-gray-very-light: #F7F7F7,
+        border-gray: #E8E9ED,
+        neutral-gray-dark: #707070,
 
-$clr-neutral-gray-light: #A5A5A5;
-$clr-neutral-gray-dark: #707070;
+        black: #000000,
+        white: #FFFFFF,
+);
 
-$clr-black: #000000;
-$clr-white: #FFFFFF;
+$shadows: (
+        primary: rgba(7, 172, 230, 0.16),
+        header: 0 3px 6px #00000029,
+        footer: 0 -5px 40px #00000029,
+);

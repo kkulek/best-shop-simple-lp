@@ -1,0 +1,24 @@
+@use 'sass:map';
+@import '../general/typography';
+@import '../general/colors';
+
+$button-radius: 35px;
+
+.button {
+  color: white;
+  font-weight: bold;
+  font-family: $ff-secondary;
+  display: inline-block;
+  border-radius: $button-radius;
+  border: none;
+  text-decoration: none;
+}
+
+.button--primary {
+  background-color: map.get($colors, primary);
+  box-shadow: map.get($shadows, primary);
+}
+
+.button--hero {
+  padding: 22px 157px;
+}

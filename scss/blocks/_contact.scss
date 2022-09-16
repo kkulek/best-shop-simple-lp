@@ -1,0 +1,124 @@
+@use 'sass:map';
+@import '../general/typography';
+@import '../general/colors';
+
+.contact {
+  line-height: 1.375rem;
+  font-family: $ff-secondary;
+}
+
+.contact__container {
+  max-width: 926px;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+}
+
+.contact__content {
+  flex-basis: 440px;
+}
+
+.contact__headline {
+  font-size: 3.0625rem;
+  line-height: 3.5625rem;
+  font-family: $ff-primary;
+}
+
+.contact__description {
+  margin-top: 22px;
+}
+
+.contact__info {
+  --size: 27px;
+  gap: var(--size);
+  display: flex;
+}
+
+.contact__info--data {
+  color: map.get($colors, neutral-gray-light);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-top: 42px;
+}
+
+.contact__info--data::before {
+  content: '';
+  display: inline-block;
+  height: var(--size);
+  width: var(--size);
+  margin-right: 10px;
+}
+
+.contact__email.contact__info--data::before {
+  background-image: url("/images/icon-mail.svg");
+}
+
+.contact__phone.contact__info--data::before {
+  background-image: url("/images/icon-phone.svg");
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 440px;
+}
+
+.contact__label {
+  text-transform: uppercase;
+  color: map.get($colors, primary);
+  letter-spacing: 3.3px;
+  font-size: 0.6875rem;
+  line-height: 0.9375rem;
+}
+
+.contact__input {
+  border: none;
+  border-bottom: 1px solid map.get($colors, neutral-gray-dark);
+  margin: 20px 0 40px;
+}
+
+.contact__input:focus {
+  border-bottom: 1px solid map.get($colors, primary);
+}
+
+.contact__input:last-of-type {
+  margin-bottom: 30px;
+}
+
+.contact__checkbox--text {
+  font-size: 0.75rem;
+  color: map.get($colors, neutral-gray-dark);
+  line-height: 1.0625rem;
+  cursor: pointer;
+}
+
+.contact__checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.contact__input--checkbox {
+  appearance: none;
+  margin-top: 5px;
+  --size: 24px;
+  min-width: var(--size);
+  min-height: var(--size);
+  border-radius: 8px;
+  border: 1px solid map.get($colors, neutral-gray-dark);
+  cursor: pointer;
+}
+
+.contact__input--checkbox:checked {
+  background-image: url("/images/icon-checkmark.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.button--contact {
+  align-self: flex-end;
+  padding: 20px 97px;
+  margin-top: 20px;
+}

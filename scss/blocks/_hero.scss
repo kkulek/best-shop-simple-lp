@@ -1,0 +1,28 @@
+@import '../general/typography';
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero__content {
+  margin-top: 125px;
+  text-align: center;
+}
+
+.hero__header {
+  font-size: 3.0625rem;
+}
+
+.hero__description {
+  margin-top: 20px;
+  margin-bottom: 38px;
+  line-height: 1.375rem;
+  font-family: $ff-secondary;
+}
+
+.hero__image {
+  width: 100%;
+  height: auto;
+}

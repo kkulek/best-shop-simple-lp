@@ -1,0 +1,134 @@
+@use 'sass:map';
+@import '../general/typography';
+@import '../general/colors';
+
+.pricing {
+  text-align: center;
+  padding: 100px 0 155px;
+}
+
+.pricing__title {
+  font-family: var(--ff-prm);
+  font-size: 2.25rem;
+  line-height: 2.625rem;
+  margin-bottom: 50px;
+}
+
+.pricing__container {
+  max-width: 1266px;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.pricing__table {
+  --extra-space: 20px;
+  flex-basis: 372px;
+  border-radius: 18px;
+  border: 1px solid;
+  position: relative;
+  margin: var(--extra-space) 0;
+}
+
+.pricing__basic.pricing__table, {
+  border-color: map.get($colors, accent-attention);
+}
+
+.pricing__professional.pricing__table {
+  border-color: map.get($colors, primary);
+  flex-basis: 405px;
+  box-shadow: 5px 10px 27px var(--primary-shadow);
+  margin: 0;
+}
+
+.pricing__premium.pricing__table {
+  border-color: map.get($colors, accent-nature);
+}
+
+.pricing__plan-name {
+  font-size: 1.25rem;
+  font-weight: $fw-bold;
+  margin-top: 34px;
+}
+
+.pricing__price {
+  font-size: 2.875rem;
+  color: var(--accent-color);
+  font-weight: $fw-light;
+  margin-top: 24px;
+}
+
+.pricing__basic .pricing__price {
+  color: map.get($colors, accent-attention);
+}
+
+.pricing__professional .pricing__price {
+  color: map.get($colors, primary);
+}
+
+.pricing__premium .pricing__price {
+  color: map.get($colors, accent-nature);
+}
+
+.pricing__limited-offer {
+  font-size: 0.75rem;
+  font-weight: $fw-bold;
+  margin-top: 20px;
+}
+
+.pricing__features {
+  margin-top: 50px;
+  margin-bottom: 63px;
+}
+
+.pricing__basic .pricing__features {
+  margin-top: 82px;
+}
+
+.pricing__professional .pricing__features {
+  margin-top: calc(50px + var(--extra-space));
+}
+
+.pricing__item {
+  font-size: 0.875rem;
+  line-height: 2.5625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $ff-secondary;
+}
+
+.pricing__item::before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  margin-right: 10px;
+  background-image: url("/images/icon-checkmark1.svg");
+  display: inline-block;
+}
+
+.pricing__item-not::before {
+  background-image: url("/images/icon-close.svg");
+}
+
+.pricing__button {
+  position: absolute;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  padding: 16px 57px;
+}
+
+.pricing__basic .pricing__button {
+  background-color: map.get($colors, accent-attention);
+}
+
+.pricing__professional .pricing__button {
+  background-color: map.get($colors, primary);
+  box-shadow: 5px 10px 14px map.get($shadows, primary);
+}
+
+.pricing__premium .pricing__button {
+  background-color: map.get($colors, accent-nature);
+}

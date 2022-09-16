@@ -1,0 +1,157 @@
+@use 'sass:map';
+@import '../general/typography';
+@import '../general/colors';
+@import '../settings/breakpoints';
+
+.benefits {
+  background-color: map.get($colors, neutral-gray-very-light);
+  padding: 105px 20px;
+}
+
+.benefits__container {
+  max-width: 1124px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.3rem;
+}
+
+.benefits__card {
+  background-color: map.get($colors, white);
+  border-radius: 5px;
+  border: 1px solid map.get($colors, border-gray);
+  padding-left: 35px;
+}
+
+.benefits__card--regular {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+$body-spacing: 50px;
+
+.benefits__copy {
+  max-width: 416px;
+  padding-bottom: $body-spacing;
+
+  @media (map.get($breakpoints, tablet)) {
+    order: 2;
+  }
+
+}
+
+.benefits__headline {
+  font-size: 2.25rem;
+  line-height: 2.625rem;
+}
+
+.benefits__description {
+  line-height: 1.375rem;
+  position: relative;
+  padding-top: 30px;
+  font-family: $ff-secondary;
+}
+
+.benefits__description::after {
+  content: '';
+  position: absolute;
+  bottom: $body-spacing * -1;
+  left: 0;
+  height: 4px;
+  width: 80%;
+  max-width: 327px;
+}
+
+.benefits__card--macbook {
+  .benefits__description::after,
+  .benefits__image::before {
+    background-color: map.get($colors, accent-attention);
+  }
+}
+
+.benefits__card--mobile {
+  .benefits__description::after,
+  .benefits__image::before {
+    background-color: map.get($colors, primary);
+  }
+}
+
+.benefits__card--brand {
+  .benefits__description::after,
+  .benefits__image {
+    background-color: map.get($colors, accent-nature);
+  }
+}
+
+.benefits__image {
+  position: relative;
+  z-index: 1;
+}
+
+.benefits__image::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  height: var(--size);
+  width: var(--size);
+}
+
+/* Macbook */
+.benefits__card--macbook {
+  padding-top: 91px;
+  padding-bottom: 38px;
+}
+
+.benefits__card--macbook .benefits__image {
+  margin-right: 70px;
+}
+
+/* Mobile */
+.benefits__card--mobile {
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+
+.benefits__card--mobile .benefits__copy {
+  align-self: center;
+  margin-right: 22px;
+}
+
+/* Macbook & Mobile design patterns*/
+.benefits__card--macbook .benefits__image::before {
+  --size: 180px;
+  border-radius: 41px;
+  transform: rotate(45deg);
+  top: -37px;
+  left: 216px;
+}
+
+.benefits__card--mobile .benefits__image::before {
+  --size: 320px;
+  border-radius: 50%;
+  top: -18px;
+}
+
+/* 3rd card - brand */
+.benefits__card--last-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.benefits__card--last-container .benefits__card {
+  align-self: stretch;
+  flex-grow: 1;
+  padding-top: 70px;
+  padding-right: 15px;
+}
+
+.benefits__card--brand .benefits__copy {
+  max-width: 553px;
+}
+
+.benefits__card--last-container .benefits__image {
+  padding: 98px 82px 64px 62px;
+}

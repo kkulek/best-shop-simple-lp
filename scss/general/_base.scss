@@ -1,0 +1,21 @@
+@use 'sass:map';
+@import 'typography';
+@import '../settings/breakpoints';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $ff-primary;
+}
+
+.container {
+  max-width: 1352px;
+  margin: 0 auto;
+
+  @media (map.get($breakpoints, mobile)) {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}

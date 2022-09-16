@@ -1,0 +1,43 @@
+@use 'sass:map';
+@import '../general/typography';
+@import '../general/colors';
+@import '../general/buttons';
+
+.header {
+  box-shadow: map.get($shadows, header);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.header__logo {
+  color: map.get($colors, primary);
+  font-size: 2rem;
+  line-height: 2.3125rem;
+  text-decoration: none;
+  padding-bottom: 10px;
+  margin: 0 15px;
+}
+
+.header__navigation {
+  display: flex;
+  gap: 3.75rem;
+}
+
+.header__navigation-item {
+  text-decoration: none;
+  color: map.get($colors, neutral-gray-light);
+  text-transform: uppercase;
+  padding: 28px 15px;
+  display: inline-block;
+  border-bottom: 4px solid transparent;
+  white-space: nowrap;
+}
+
+.header__navigation-item:hover {
+  color: map.get($colors, black);
+  border-color: map.get($colors, primary);
+}

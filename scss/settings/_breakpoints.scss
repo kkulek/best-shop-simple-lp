@@ -1,0 +1,7 @@
+$breakpoints: (
+        mobile: 'max-width: 640px',
+        tablet: 'max-width: 981px',
+)
+
+///@media (map.get($breakpoints, mobile))
+///@media (map.get($breakpoints, tablet))

@@ -1,0 +1,38 @@
+@use 'sass:map';
+@import '../general/typography';
+@import '../general/colors';
+
+.footer {
+  margin-top: 60px;
+  padding: 0 15px;
+  box-shadow: map.get($shadows, footer);
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__left {
+  padding: 20px 0;
+}
+
+.footer__logo {
+  color: map.get($colors, primary);
+  font-size: 1.625rem;
+  line-height: 1.875rem;
+  font-family: var(--ff-prm);
+  text-decoration: none;
+}
+
+.footer__copyrights {
+  font-size: 0.6875rem;
+  line-height: 0.9375rem;
+  color: map.get($colors, neutral-gray-dark);
+  margin-top: 6.5px;
+}
+
+.footer__right:last-child a {
+  margin-left: 15px;
+}
